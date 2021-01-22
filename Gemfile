@@ -65,6 +65,8 @@ group :development do
   gem 'spring'
   gem 'hamlit-rails'
   gem 'html2haml'
+
+  gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
