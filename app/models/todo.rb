@@ -4,7 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text             not null
-#  status      :integer
+#  status      :integer          default("to_do")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  list_id     :bigint
@@ -21,8 +21,10 @@ class Todo < ApplicationRecord
   validates :description, presence: true, uniqueness: { scope: :list_id }
 
   enum status: {
-    to_do: 0,
-    done: 1
+    incomplete: 0,
+    complete: 1
   }
+
+  private
 
 end

@@ -1,6 +1,6 @@
 %h1 Editing list
 
-= render 'form'
+= render partial: 'form', locals: { list: @list }
 
 = link_to 'Show', @list
 \|
